@@ -96,3 +96,60 @@ footer {
     gap: 5px;             
     padding: 5px;
 }
+
+.titulo {
+    text-align: center;
+}
+
+.spino {
+    display: flex;           
+    justify-content: space-between; 
+    gap: 5px;             
+    padding: 5px;
+    display: block;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 150px;
+}
+.containess {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rex{
+    display: flex;           
+    justify-content: space-between; 
+    gap: 5px;             
+    padding: 5px;
+    display: block;
+}
+
+.raptor{
+    display: flex;           
+    justify-content: space-between; 
+    gap: 5px;             
+    padding: 5px;
+    display: block;
+}
+
+.anquilo{
+    display: flex;           
+    justify-content: space-between; 
+    gap: 5px;             
+    padding: 5px;
+    display: block;
+}
+
+.cerat{
+    display: flex;           
+    justify-content: space-between; 
+    gap: 5px;             
+    padding: 5px;
+    display: block;
+}

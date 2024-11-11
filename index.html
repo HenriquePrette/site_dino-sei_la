@@ -10,6 +10,10 @@
     <header>
         <img src="imagens/logo_spino.jpg" class="logo">
         <h1>Explorando o Passado</h1>
+        <input type="text" id="searchInput" placeholder="Buscar especies...">
+    <button id="searchButton" onclick="filterProducts()">Buscar</button>
+    
+
         <nav>
             <button onclick="showSection('dinossauros')">Dinossauros</button>
             <button onclick="showSection('paleontologia')">Paleontologia</button>
@@ -18,6 +22,7 @@
     </header>
 
     <section id="dinossauros" class="content">
+        <div class="containess" id="especiesContainer"></div>
         <h2>O que são Dinossauros🦖?</h2>
         <p>
             Os dinossauros são um grupo de répteis que dominaram a Terra durante a Era Mesozoica, que durou aproximadamente de 252 a 66 milhões de anos atrás. Eles pertencem ao clado Dinosauria e são divididos em dois principais grupos:
@@ -77,15 +82,28 @@
         <h2>Familia dos dinossauros:</h2>
         <div class="container">
             <div class="caixa">
-              <a class="link" href="Tyrannosauridae.html">Tyrannosauridae  <img src="imagens/tyrannosauridaepapo.jpg" alt=""></a>
+                <a class="link" href="tyrannosauridae.html">tyrannosauridae <img src="imagens/tyrannosauridaepapo.jpg" alt=""></a>        
+            </div>
+
+         <div class="caixa">
+             <a class="link" href="Spinosauridae.html">Spinosauridae <img src="imagens/Spinosauridaeprapro.jpg" alt=""></a>
          </div>
 
          <div class="caixa">
-             <a class="link" href="#">Spinosauridae <img src="imagens/Spinosauridaeprapro.jpg" alt=""></a>
+            <a class="link" href="Dromaeosauridae.html">Dromaeosauridae <img src="imagens/dromaeosauuu.png" alt=""></a>
+         </div>
+
+         <div class="caixa">
+            <a class="link" href="Ankylosauridae.html">Ankylosauridae <img src="imagens/Ankylosauridae.webp" alt=""></a>
+         </div>
+
+         <div class="caixa">
+            <a class="link" href="Ceratopsidae.html">Ceratopsidae <img src="imagens/Ceratopsidae.png" alt=""></a>
          </div>
        </div>
 
-        <p>jurassic park é um filmão :)</p>
+       <p>Jurassic Park é um filmao :)</p>
+
 
     </section>
 
@@ -136,6 +154,8 @@
         <h2>Curiosidades sobre Paleontologia</h2>
         <p>Primeiro Fóssil: O primeiro fóssil reconhecido é um trilobita encontrado em 1820, que ajudou a estabelecer a paleontologia como ciência.</p>
         <p>Fósseis de Dinossauros: Os dinossauros foram descobertos no século XIX, levando a um grande interesse público e científico.</p>
+
+        <p>Jurassic Park é um filmao :)</p>
 
     </section>
 
@@ -209,6 +229,8 @@
             <p>Grandes Descobertas: Descobertas como a tumba de Tutancâmon e a cidade perdida de Machu Picchu capturaram a imaginação pública e científica.</p>
         </ul>
 
+        <p>Jurassic Park é um filmao :)</p>
+
     </section>
 
     <script>
@@ -217,6 +239,60 @@
             sections.forEach(sec => sec.style.display = 'none');
             document.getElementById(section).style.display = 'block';
         }
+
+        const especies = [
+            {id: 1, especie: 'Spinosaurus', image:'imagens/apinosauro_dino.jpg', link:'Spinosauridae.html#spino'},
+            {id: 2, especie: 'Baryonyx', image:'imagens/Baryonyx_dino.jpg', link:'Spinosauridae.html#bary'},
+            {id: 3, especie: 'Suchomimus', image:'imagens/Suchomimus_dino.webp', link:'Spinosauridae.html#sucho'},
+            {id: 4, especie: 'Irritator', image:'imagens/Irritator_dino.jpg', link:'Spinosauridae.html#irri'},
+            {id: 5, especie: 'Tyrannosaurus rex', image:'imagens/Tyrannosaurus_Rex.webp', link:'tyrannosauridae.html#rex' },
+            {id: 6, especie: 'Albertosaurus', image:'imagens/albertossauro.jpg', link:'tyrannosauridae.html#albert'},
+            {id: 7, especie: 'Daspletosauru', image:'imagens/albertossauro.jpg', link:'tyrannosauridae.html#dasple'},
+            {id: 8, especie: 'Tarbosaurus', image:'imagens/tarbosaurosss.jpg', link:'tyrannosauridae.html#turbo'},
+            {id: 9, especie: 'Velociraptor', image:'imagens/velociraptor.jpg', link:'Dromaeosauridae.html#parkkk'},
+            {id: 10, especie: 'Utahraptor', image:'imagens/utahraptor.jpg', link:'Dromaeosauridae.html#utah'},
+            {id: 11, especie: 'Deinonychus', image:'imagens/deinonico.jpg', link:'Dromaeosauridae.html#deino'},
+            {id: 12, especie: 'Microraptor', image:'imagens/microraptorrr.png', link:'Dromaeosauridae.html#micro'},
+            {id: 13, especie: 'Ankylosaurus', image:'imagens/Ankylosaurus.jpeg', link:'Ankylosauridae.html#kilo'},
+            {id: 14, especie: 'Euoplocephalus', image:'imagens/Euoplocephalus.webp', link:'Ankylosauridae.html#euplo'},
+            {id: 15, especie: 'Pinacosaurus', image:'imagens/Pinacosaurus.webp', link:'Ankylosauridae.html#pina'},
+            {id: 16, especie: 'Tarchia', image:'imagens/Tarchiaa.jpg', link:'Ankylosauridae.html#tarch'},
+            {id: 17, especie: 'Triceratops', image:'imagens/tricer.jpg', link:'Ceratopsidae.html#trik'},
+            {id: 18, especie: 'Styracosaurus', image:'imagens/styracosaurus_listra.webp', link:'Ceratopsidae.html#styr'},
+            {id: 19, especie: 'Centrosaurus', image:'imagens/central.jpg', link:'Ceratopsidae.html#centro'},
+            {id: 20, especie: 'Pachyrhinosaur', image:'imagens/paqui.jpg', link:'Ceratopsidae.html#papara'},
+            {id: 21, especie: 'Chasmosaurus', image:'imagens/frezza_3f.jpg', link:'Ceratopsidae.html#chacha'}
+        ]
+        
+    const especiesContainer = document.getElementById('especiesContainer');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    function renderProducts(produtos) {
+        especiesContainer.innerHTML = ''; // Limpa a lista de produtos
+    produtos.forEach(produto => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <h3>${produto.especie}</h3> 
+            <img src = '${produto.image}'> 
+            <a href = '${produto.link}'>Mais....</a>
+        `;
+        especiesContainer.appendChild(card);
+    });
+}
+
+function filterProducts() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredProducts = especies.filter(produto => 
+        produto.especie.toLowerCase().includes(searchTerm)
+    );
+    renderProducts(filteredProducts);
+}
+
+// Renderiza todos os produtos ao carregar a página
+renderProducts(especies);
+
     </script>
 
     <footer>
