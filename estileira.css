@@ -55,10 +55,12 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+
 }
 
 .content {
-    display: none;
+    display: none;  
+    margin-bottom: 30px ;
 }
 
 #dinossauros {
@@ -76,6 +78,7 @@ footer {
     height: 100px;
     background-color: #4CAF50;
     color: white;
+    display: flexbox;
 }
 
 .link {
